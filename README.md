@@ -14,21 +14,21 @@ Inactive or at-risk customers to re-engage
 ## Data Preparation & Transformation
 
 1. Data Loading (Google BigQuery)
-* Created a new project: rfm1840
-* Created a dataset: sales
-* Imported all 12 monthly sales tables into BigQuery from a local machine
+  * Created a new project: rfm1840
+  * Created a dataset: sales
+  * Imported all 12 monthly sales tables into BigQuery from a local machine
 
 2. Data Processing Steps
-* Combined monthly datasets into a single table: sales_2025
-* Calculated:
+  * Combined monthly datasets into a single table: sales_2025
+  * Calculated:
              Recency (how recently a customer purchased)
              Frequency (how often they purchase)
              Monetary (total spending)
-* Assigned RFM rankings using SQL window functions
-* Developed a scoring system:
+  * Assigned RFM rankings using SQL window functions
+  * Developed a scoring system:
     Scores range from 1 (lowest) to 10 (highest)
-* Computed total RFM score by summing individual scores
-* Created final segmentation table: rfm_segments_final
+  * Computed total RFM score by summing individual scores
+  * Created final segmentation table: rfm_segments_final
         Customers grouped into segments such as:
             Champions
             Engaged
@@ -37,35 +37,35 @@ Inactive or at-risk customers to re-engage
             Lost/Inactive
 
 ## Dashboard Creation (Power BI)
-* Data Connection
+  * Data Connection
   Connected Power BI to Google BigQuery
 
-* Visualizations Created
-    Customer Table: Displays all customer RFM data
-    Column Chart: Number of customers per segment
-    KPI Cards:
+  * Visualizations Created
+      Customer Table: Displays all customer RFM data
+      Column Chart: Number of customers per segment
+      KPI Cards:
         Total Customers
         Total Revenue Generated
 ## Key Insights
-* 287 unique customers generated $17,069 in revenue
-* The "Engaged" segment has the highest number of customers (61)
-* The "Lost/Inactive" segment has the lowest (7 customers)
-* 38 customers are at risk, representing a key opportunity for retention strategies
+  * 287 unique customers generated $17,069 in revenue
+  * The "Engaged" segment has the highest number of customers (61)
+  * The "Lost/Inactive" segment has the lowest (7 customers)
+  * 38 customers are at risk, representing a key opportunity for retention strategies
 
 ## Skills & Tools Used
-* Google BigQuery (GCP) for data storage and processing
-* SQL for data transformation and analysis:
+  * Google BigQuery (GCP) for data storage and processing
+  * SQL for data transformation and analysis:
       Views
       Common Table Expressions (CTEs)
       Window functions (e.g., ROW_NUMBER(), NTILE)
       CASE statements
-* Power BI for data visualization and dashboard creation
+  * Power BI for data visualization and dashboard creation
 
 ## Key Learnings
-* End-to-end implementation of an RFM analysis pipeline
-* Practical experience with cloud-based data warehousing
-* Efficient use of SQL for analytical transformations
-* Building interactive dashboards from cloud data sources
+  * End-to-end implementation of an RFM analysis pipeline
+  * Practical experience with cloud-based data warehousing
+  * Efficient use of SQL for analytical transformations
+  * Building interactive dashboards from cloud data sources
 
 ### Author
 Utkarsh Gobin <br>
