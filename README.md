@@ -1,4 +1,9 @@
-# RFM-Analysis-of-sales-records-
-Performing a recency, frequency and monetary analysis on monthly sales table for the whole year of 2025. The data preparation is done in SQL(BigQuery) and the visualization on Power BI 
+# RFM-Analysis-of-Sales-Records-Project
+This project performs a Recency, Frequency, Monetary (RFM) analysis using 2025 sales data. The objective is to evaluate customer purchasing behavior and segment customers into meaningful groups to support targeted business strategies.
 
-![image alt](https://github.com/ugobin998-maker/RFM-Analysis-of-sales-records-/blob/9e7c589ccee155950f18946004a6616c5501dfb6/Screenshot%202026-04-16%20112553.png))
+![image alt](https://github.com/ugobin998-maker/RFM-Analysis-of-sales-records-/blob/9e7c589ccee155950f18946004a6616c5501dfb6/Screenshot%202026-04-16%20112553.png)
+
+# Tools & Technologies
+* Google Cloud Platform (BigQuery)
+SQL (CTEs, Window Functions, Aggregations)
+Power BI (for visualization)
