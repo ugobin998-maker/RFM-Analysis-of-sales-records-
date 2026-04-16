@@ -62,10 +62,12 @@ Data Processing Steps
   * Power BI for data visualization and dashboard creation
 
 ## Key Learnings
-  * End-to-end implementation of an RFM analysis pipeline
-  * Practical experience with cloud-based data warehousing
-  * Efficient use of SQL for analytical transformations
-  * Building interactive dashboards from cloud data sources
+ * Gained hands-on experience using Google cloud platform for data analysis, transferable to cloud    services like AWS.
+ *Learned to navigate BigQuery and execute SQL queries.
+ *	Mastered SQL VIEWS, including optimal use cases for data analysis.
+ *Implemented SQL functions, such as CASE statements and window functions.
+ *Connected a Google account to Power BI for visualizing Google Cloud data.
+
 
 ### Author
 Utkarsh Gobin <br>
