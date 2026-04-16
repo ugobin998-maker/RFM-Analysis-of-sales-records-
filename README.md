@@ -11,6 +11,7 @@ Inactive or at-risk customers to re-engage
 ![image alt](https://github.com/ugobin998-maker/RFM-Analysis-of-sales-records-/blob/9e7c589ccee155950f18946004a6616c5501dfb6/Screenshot%202026-04-16%20112553.png)
 
 ## Data Preparation & Transformation
+
 Data Loading (Google BigQuery)
 Created a new project: rfm1840
 Created a dataset: sales
