@@ -1,41 +1,66 @@
-# RFM-Analysis-of-Sales-Records-Project
-This project performs a Recency, Frequency, Monetary (RFM) analysis using 2025 sales data. The objective is to evaluate customer purchasing behavior and segment customers into meaningful groups to support targeted business strategies.
+# RFM Analysis Project (2025 Sales Data)
+## Project Overview
+This project performs a Recency, Frequency, and Monetary (RFM) analysis on monthly sales data for the year 2025. The goal is to evaluate customer purchasing behavior and segment customers based on how recently they purchased, how often they buy, and how much they spend.
+
+The insights from this analysis help identify:
+
+High-value customers to prioritize
+Loyal and engaged customers to retain
+Inactive or at-risk customers to re-engage
 
 ![image alt](https://github.com/ugobin998-maker/RFM-Analysis-of-sales-records-/blob/9e7c589ccee155950f18946004a6616c5501dfb6/Screenshot%202026-04-16%20112553.png)
 
-## Tools & Technologies
-* Google Cloud Platform (BigQuery)
-* SQL (CTEs, Window Functions, Aggregations)
-* Power BI (for visualization)
+## Data Preparation & Transformation
+Data Loading (Google BigQuery)
+Created a new project: rfm1840
+Created a dataset: sales
+Imported all 12 monthly sales tables into BigQuery from a local machine
+Data Processing Steps
+Combined monthly datasets into a single table: sales_2025
+Calculated:
+Recency (how recently a customer purchased)
+Frequency (how often they purchase)
+Monetary (total spending)
+Assigned RFM rankings using SQL window functions
+Developed a scoring system:
+Scores range from 1 (lowest) to 10 (highest)
+Computed total RFM score by summing individual scores
+Created final segmentation table: rfm_segments_final
+Customers grouped into segments such as:
+Champions
+Engaged
+Potential Loyalists
+At Risk
+Lost/Inactive
 
-## Project Workflow
+## Dashboard Creation (Power BI)
+Data Connection
+Connected Power BI to Google BigQuery
 
-1. Data Import
-    A new project was created in Google Cloud BigQuery, and raw sales data was imported from a local device.
+Visualizations Created
+Customer Table: Displays all customer RFM data
+Column Chart: Number of customers per segment
+KPI Cards:
+Total Customers
+Total Revenue Generated
+📈 Key Insights
+287 unique customers generated $17,069 in revenue
+The "Engaged" segment has the highest number of customers (61)
+The "Lost/Inactive" segment has the lowest (7 customers)
+38 customers are at risk, representing a key opportunity for retention strategies
+🛠️ Skills & Tools Used
+Google BigQuery (GCP) for data storage and processing
+SQL for data transformation and analysis:
+Views
+Common Table Expressions (CTEs)
+Window functions (e.g., ROW_NUMBER(), NTILE)
+CASE statements
+Power BI for data visualization and dashboard creation
+🚀 Key Learnings
+End-to-end implementation of an RFM analysis pipeline
+Practical experience with cloud-based data warehousing
+Efficient use of SQL for analytical transformations
+Building interactive dashboards from cloud data sources
+📌 Conclusion
 
-2. Data Consolidation
-    Monthly sales data (January–December) was combined into a single table using UNION ALL to ensure all records, including duplicates where applicable, were          preserved.
-
-3. RFM Calculation
-    Recency, Frequency, and Monetary values were calculated using:
-
-    Recency: Days since last purchase (using date functions)
-    Frequency: Total number of transactions per customer (COUNT)
-    Monetary: Total revenue per customer (SUM)
-
-4. Customer Ranking
-   A VIEW was created to rank customers based on RFM values using the ROW_NUMBER() window function.
-
-5. RFM Scoring
-   Another VIEW was created to assign scores (i.e., 1–10) for each RFM metric using the NTILE() function, 10 being the best and 1, the worst.
-
-6. Final RFM Dataset
-   A consolidated VIEW was built containing:
-
-   Customer details
-   RFM values (Recency, Frequency, Monetary)
-   RFM scores (R, F, M)
-   Total RFM score (R + F + M)
-
-7. Customer Segmentation
-   A final RFM table was created by assigning customers into segments based on their total RFM score
+This project demonstrates how RFM analysis can be used to extract actionable insights from raw sales data. By segmenting customers effectively, businesses can better target their strategies, improve retention, and maximize revenue.
