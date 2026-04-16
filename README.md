@@ -13,12 +13,12 @@ Inactive or at-risk customers to re-engage
 
 ## Data Preparation & Transformation
 
-1. Data Loading (Google BigQuery)
+Data Loading (Google BigQuery)
   * Created a new project: rfm1840
   * Created a dataset: sales
   * Imported all 12 monthly sales tables into BigQuery from a local machine
 
-2. Data Processing Steps
+Data Processing Steps
   * Combined monthly datasets into a single table: sales_2025
   * Calculated:
              Recency (how recently a customer purchased)
