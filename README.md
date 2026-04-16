@@ -9,26 +9,27 @@ This project performs a Recency, Frequency, Monetary (RFM) analysis using 2025 s
 * Power BI (for visualization)
 
 ## Project Workflow
-### 1. Data Import
+
+* Data Import
 A new project was created in Google Cloud BigQuery, and raw sales data was imported from a local device.
 
-### 2. Data Consolidation
+* Data Consolidation
 Monthly sales data (January–December) was combined into a single table using UNION ALL to ensure all records, including duplicates where applicable, were preserved.
 
-### 3. RFM Calculation
+* RFM Calculation
 Recency, Frequency, and Monetary values were calculated using:
 
 Recency: Days since last purchase (using date functions)
 Frequency: Total number of transactions per customer (COUNT)
 Monetary: Total revenue per customer (SUM)
 
-### 4. Customer Ranking
+* Customer Ranking
 A VIEW was created to rank customers based on RFM values using the ROW_NUMBER() window function.
 
-### 5. RFM Scoring
+* RFM Scoring
 Another VIEW was created to assign scores (i.e., 1–10) for each RFM metric using the NTILE() function, 10 being the best and 1, the worst.
 
-### 6. Final RFM Dataset
+* Final RFM Dataset
 A consolidated VIEW was built containing:
 
 Customer details
